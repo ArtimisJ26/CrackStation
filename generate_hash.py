@@ -19,7 +19,7 @@ for i in range(48, 123):
         s = str(chr(i))
         result = hashlib.sha1(s.encode())
         hashValue = result.hexdigest()
-        data[s] = hashValue
+        data[hashValue] = s
         #print(s, hashValue)
         for j in range(48, 123):
             if (j not in range(58,65)) and (j not in range(91,97)):
@@ -29,7 +29,7 @@ for i in range(48, 123):
                 result = hashlib.sha1(a.encode())
                 hashValue = result.hexdigest()
                 #print(a, hashValue)
-                data[a] = hashValue
+                data[hashValue] = a
 
 writeToJSONFile(path, fileName, data)
 
