@@ -8,7 +8,7 @@ def writeToJSONFile(path, fileName, data):
         json.dump(data, fp)
 
 
-path = './'
+path = './Sources/CrackStation'
 fileName = 'hash_dictionary'
 
 data = {}
@@ -16,6 +16,11 @@ data = {}
 for i in range(48, 123):
     if (i not in range(58,65)) and (i not in range(91,97)):
         #print(chr(i), end = "\n")
+        s = str(chr(i))
+        result = hashlib.sha1(s.encode())
+        hashValue = result.hexdigest()
+        data[s] = hashValue
+        #print(s, hashValue)
         for j in range(48, 123):
             if (j not in range(58,65)) and (j not in range(91,97)):
                 a = str(chr(i)+chr(j))
