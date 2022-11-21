@@ -14,11 +14,23 @@ final class CrackStationTests: XCTestCase {
         
     }
 
-    func testdecrypt() throws {
+    func testdecryptA() throws {
         let shaHash = "ebf46618066c3b6fca4dd4d020f99849da52b8de"
         let crackStationInstance = CrackStation()
         let answer = try crackStationInstance.decrypt(shaHash: shaHash)
 
+        //print(shaHash, answer)
+
         XCTAssertEqual(answer, "kJ")
+    }
+
+    func testdecryptB() throws {
+        let shaHash = "41f8fc99dc7f46f151d746638620059170c45a03"
+        let crackStationInstance = CrackStation()
+        let answer = try crackStationInstance.decrypt(shaHash: shaHash)
+
+        //print(shaHash, answer)
+
+        XCTAssertEqual(answer, "zgf")
     }
 }
