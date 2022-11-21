@@ -13,7 +13,7 @@ public class CrackStation: Decrypter {
         
      }
     static func loadDictionaryFromDisk() throws -> [String : String] {
-        guard let path = Bundle.module.url(forResource: "hash_dictionary", withExtension: "json") else { return [:] }
+        guard let path = Bundle.module.url(forResource: "sha1_hash_dictionary", withExtension: "json") else { return [:] }
 
         let data = try Data(contentsOf: path)
         let jsonResult = try JSONSerialization.jsonObject(with: data)

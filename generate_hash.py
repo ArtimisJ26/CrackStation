@@ -52,7 +52,7 @@ def writeToJSONFile(path, fileName, data):
 
 
 path = './Sources/CrackStation'
-fileName1 = 'hash_dictionary'
+fileName1 = 'sha1_hash_dictionary'
 fileName2 = 'sha2_hash_dictionary'
 
 SHA1data = {}
