@@ -34,6 +34,16 @@ final class CrackStationTests: XCTestCase {
         XCTAssertEqual(answer, "zgf")
     }
 
+    func testdecryptSHA1C() throws {
+        let shaHash = "97ad1aff7e313188880680cc7b6f001a0be171df"
+        let crackStationInstance = CrackStation()
+        let answer = try crackStationInstance.decrypt(shaHash: shaHash)
+
+        //print(shaHash, answer)
+
+        XCTAssertEqual(answer, "!?")
+    }
+
 
     func testdecryptSHA2A() throws {
         let shaHash = "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
@@ -63,5 +73,25 @@ final class CrackStationTests: XCTestCase {
         //print(shaHash, answer)
 
         XCTAssertEqual(answer, "zgf")
+    }
+
+    func testdecryptSHA2D() throws {
+        let shaHash = "4efb471eb516c8dd0004fa02e4863d7baa36ecfce7ba6406ab710b3796e2ea3b"
+        let crackStationInstance = CrackStation()
+        let answer = try crackStationInstance.decrypt(shaHash: shaHash)
+
+        //print(shaHash, answer)
+
+        XCTAssertEqual(answer, "zg!")
+    }
+
+    func testdecryptSHA2E() throws {
+        let shaHash = "290a610966013e6e9d662e3e78cc15286b3152adf4bf6b08627ed83415ffc028"
+        let crackStationInstance = CrackStation()
+        let answer = try crackStationInstance.decrypt(shaHash: shaHash)
+
+        //print(shaHash, answer)
+
+        XCTAssertEqual(answer, "z?!")
     }
 }

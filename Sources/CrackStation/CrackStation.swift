@@ -4,7 +4,7 @@ public class CrackStation: Decrypter {
 
     private let lookupTable: [String : String]
 
-     public required init() { 
+    public required init() { 
         
         do {
             lookupTable = try CrackStation.loadDictionaryFromDisk()

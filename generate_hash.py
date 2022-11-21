@@ -13,8 +13,8 @@ fileName1 = 'hash_dictionary'
 
 SHA1data = {}
 
-for i in range(48, 123):
-    if (i not in range(58,65)) and (i not in range(91,97)):
+for i in range(33, 123):
+    if (i not in range(34,48)) and (i not in range(58,63)) and (i not in range(64,65)) and (i not in range(91,97)):
         #print(chr(i), end = "\n")
         s = str(chr(i))
         result1 = hashlib.sha1(s.encode())
@@ -26,8 +26,8 @@ for i in range(48, 123):
         #print(s, hashValue1)
         #print(s, hashValue2)
         #print(s, hashValue)
-        for j in range(48, 123):
-            if (j not in range(58,65)) and (j not in range(91,97)):
+        for j in range(33, 123):
+            if (i not in range(34,48)) and (i not in range(58,63)) and (i not in range(64,65)) and (i not in range(91,97)):
                 a = str(chr(i)+chr(j))
                 #print(chr(i),chr(j))
                 #print(a, end=" ")
@@ -39,8 +39,8 @@ for i in range(48, 123):
                 SHA1data[hashValue2] = a
                 #print(a, hashValue1)
                 #print(a, hashValue2)
-            for k in range(48, 123):
-                if (j not in range(58,65)) and (j not in range(91,97)):
+            for k in range(33, 123):
+                if (i not in range(34,48)) and (i not in range(58,63)) and (i not in range(64,65)) and (i not in range(91,97)):
                     b = str(chr(i)+chr(j)+chr(k))
                     result1 = hashlib.sha1(b.encode())
                     hashValue1 = result1.hexdigest()
