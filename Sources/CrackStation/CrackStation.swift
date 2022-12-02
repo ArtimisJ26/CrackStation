@@ -12,7 +12,7 @@ public class CrackStation: Decrypter {
         catch{ lookupTable = ["":""]}
         
      }
-    static func loadDictionaryFromDisk() throws -> [String : String] {
+    static private func loadDictionaryFromDisk() throws -> [String : String] {
         guard let path = Bundle.module.url(forResource: "hash_dictionary", withExtension: "json") else { return [:] }
 
         let data = try Data(contentsOf: path)
